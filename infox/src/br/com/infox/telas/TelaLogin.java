@@ -48,6 +48,9 @@ public class TelaLogin {
         rs=pst.executeQuery();
         //se existir usuario e senha correspondente
         if (rs.next()) {
+            //TelaPrincipal telaprincipal = new TelaPrincipal();
+            //principal.setVisible(true);
+            
             JFrame frame = new JFrame("TelaPrincipal");
             frame.setVisible(true);
 
