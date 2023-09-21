@@ -1,10 +1,10 @@
-# create database dbinfox;
+create database dbinfox;
+
 
 use dbinfox;
-
 create table tbusuarios(
-iduser int primary key,
-usuario varchar (50) not null,
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome varchar (50) not null,
 fone varchar (15),
 login varchar (15) not null unique,
 senha varchar (15) not null
@@ -12,18 +12,18 @@ senha varchar (15) not null
 
 describe tbusuarios;
 
-insert into tbusuarios(iduser,usuario,fone,login,senha)
-values (1,'bruno zuliani','51986819521','brunoesz','memelo01');
+insert into tbusuarios(nome,fone,login,senha)
+values ('bruno zuliani','51986819521','brunoesz','memelo01');
 
-insert into tbusuarios(iduser,usuario,fone,login,senha)
-values (2,'administrador','51986819521','admin','admin');
+insert into tbusuarios(nome,fone,login,senha)
+values ('administrador','51986819521','admin','admin');
 
-insert into tbusuarios(iduser,usuario,fone,login,senha)
-values (3,'jose','51986819521','jose','jose');
+insert into tbusuarios(nome,fone,login,senha)
+values ('jose','51986819521','jose','jose');
 
 select * from tbusuarios;
 
-update tbusuarios set fone = '8888-88888' where iduser = 2;
+update usuarios set fone = '8888-88888' where iduser = 2;
 
 delete from tbusuarios where iduser =3;
 
