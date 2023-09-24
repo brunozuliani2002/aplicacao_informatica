@@ -23,6 +23,8 @@ values ('jose','51986819521','jose','jose');
 
 select * from tbusuarios;
 
+
+
 update usuarios set fone = '8888-88888' where iduser = 2;
 
 delete from tbusuarios where iduser =3;
@@ -67,3 +69,15 @@ C.nomecli,fonecli
 from tbos as O
 inner join tbclientes as C
 on (O.idcli = C.idcli); 
+
+create table tbpedidos(
+id INT AUTO_INCREMENT PRIMARY KEY,
+produto varchar (50) not null,
+preco varchar (20) not null
+);
+
+
+insert into tbpedidos(produto, preco)
+values('brocolis',20.00);
+
+select * from tbpedidos;
