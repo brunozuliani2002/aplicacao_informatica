@@ -42,33 +42,7 @@ values('alguem','rua teor','1111-1111','pao@gmail.com');
 
 describe tbclientes;
 
-create table tbos(
-os int primary key auto_increment,
-data_os timestamp default current_timestamp,
-equipamento varchar (150) not null,
-defeito varchar (150) not null,
-servico varchar (150),
-tecnico varchar (30),
-valor decimal(10,2),
-idcli int not null,
-foreign key(idcli) references tbclientes (idcli)
-);
 
-describe tbos;
-
-insert into tbos (equipamento, defeito , servico, tecnico, valor, idcli)
-values ('notebook','nao liga','troca da fonte', 'ze',50.50,1);
-
-select * from tbos;
-
--- o codigo abaixo tra informacoes de 2 tabelas
-
-select 
-O.os,equipamento,defeito,servico,valor,
-C.nomecli,fonecli
-from tbos as O
-inner join tbclientes as C
-on (O.idcli = C.idcli); 
 
 create table tbpedidos(
 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -78,6 +52,6 @@ preco varchar (20) not null
 
 
 insert into tbpedidos(produto, preco)
-values('brocolis',20.00);
+values('brocolis','20.00');
 
 select * from tbpedidos;
