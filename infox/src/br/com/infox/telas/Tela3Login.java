@@ -65,13 +65,13 @@ public class Tela3Login {
 
 
     public Tela3Login() throws SQLException, ClassNotFoundException {
+
         conexao = ModuloConexao.obterConexao();
         if (conexao != null) {
             LStatus.setText("conectado");
         } else {
             LStatus.setText("nao conectado");
         }
-
 
         btnLogin.addActionListener(new ActionListener() {
             @Override
